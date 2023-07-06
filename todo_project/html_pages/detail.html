@@ -1,0 +1,17 @@
+{% extends 'common.html'%}
+{% block body %}
+
+ <title>DETAILS</title>
+<div id="todo_list" class="col-12 col-sm-6 ">
+        <h5 id="to_be_com."class="h5 ">To be completed.........</h5>
+        <div class="card shadow" id="lst">
+            <div class="card-body">
+                <h5 class="card-text">{{ info.task}}</h5>
+                <h6 class="card-text">{{ info.priority}}</h6>&emsp13;
+                <h6 class="card-text">{{ info.date}}</h6>
+                <a href="{% url 'todoapp_1:delete' info.id %}" class="shadow btn btn-danger">completed</a>
+                <a href="{% url 'todoapp_1:update' info.id %}" class="shadow btn btn-primary">update</a>
+            </div>
+        </div>
+    </div>
+{% endblock%}

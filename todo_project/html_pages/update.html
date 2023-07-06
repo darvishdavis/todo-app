@@ -1,0 +1,15 @@
+{% extends 'common.html'%}
+{% block body %}
+    <title>UPDATE</title>
+<div  class=" col-12">
+        <div id="todo_form" class="p-5 m-2 shadow  ">
+            <form id="frm" method="post" class="form-control ">
+                    {% csrf_token %}
+                    <input id="txt" type="text" class="shadow  " value="{{old.task}} " name="task"><br><br>
+                    <input id="nmbr" type="number" class="shadow" value="{{old.priority}}" name="priority"><br><br>
+                    <input id="dt" type="date" class="shadow" value="{{old.date}}" name="date"><br><br>
+                    <input id="bttn" type="submit" value="updated" class="shadow btn btn-primary">
+            </form>
+        </div>
+</div>
+{% endblock %}

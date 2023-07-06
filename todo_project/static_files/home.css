@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+}
+
+#todo_form {
+  background-color:#1f2020;
+  border-radius: 15px;
+}
+
+#frm{
+background-color:#1f2020;
+}
+#txt{
+width:50%;
+margin:2%;
+margin-left:25%;
+position: relative;
+}
+
+#nmbr{
+width:50%;
+margin-left:25%;
+position: relative;
+}
+
+#dt{
+width:50%;
+margin-left:25%;
+position: relative;
+}
+
+#bttn{
+width:20%;
+margin:1%;
+margin-left:40%;
+position: relative;
+color:white;
+}
+
+
+#lst{
+background-color:#1f2020;
+margin:1%;
+color:white;
+background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(77, 77, 77));}
+
+}

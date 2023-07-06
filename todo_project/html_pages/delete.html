@@ -1,0 +1,15 @@
+{% extends 'common.html'%}
+{% block body %}
+<title>DELETE</title>
+<div class="card shadow" id="lst">
+    <div class="card-body">
+        <div >
+            <h4 class="card-text">Did you actually complete "{{dtls.task}}" task</h4>
+        </div>
+        <div>
+            <a class="btn btn-success " href="{% url 'todoapp_1:y' dtls.id %}">Yes</a>
+            <a class="btn btn-danger" href="/">No</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
