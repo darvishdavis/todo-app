@@ -10,6 +10,7 @@ from django.views.generic.edit import UpdateView, DeleteView
 
 
 # Create your views here.
+
 #class based views
 
 class TodoListView(ListView):
