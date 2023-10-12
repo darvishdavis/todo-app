@@ -1,10 +1,20 @@
 body{
-margin=0px;
+    margin: 0;
+    padding: 0;
+}
+
+.background-container {
+    background-image: url('background-img.jpg');  /* Replace with the path to your image */
+    background-size: 100% ;
+    background-attachment: fixed;  /* Keeps the background fixed as you scroll */
+    min-height: 100vh;  /* 100% of the viewport height */
+    min-width: 100vw;   /* 100% of the viewport width */
 }
 
 #whole{
-background-color:white;
+
 }
+
 #header-img{
-border-radius:25px;
+    width: 100vw;
 }

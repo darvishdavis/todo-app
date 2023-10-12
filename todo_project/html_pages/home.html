@@ -1,28 +1,31 @@
 {% extends 'common.html'%}
+
 {% block body %}
-<title>TODO</title>
+<title>TO-DO</title>
+
 <div class="row">
     <div  class=" col-12 col-sm-6 ">
-        <div id="todo_form" class="p-5 m-2 shadow  ">
+        <div id="todo_form" class="m-2 shadow  ">
             <form id="frm" method="post" class="form-control ">
                     {% csrf_token %}
                     <input id="txt" type="text" class="shadow  " placeholder="mention your task " name="task"><br><br>
                     <input id="nmbr" type="number" class="shadow" placeholder="mention the priority" name="priority"><br><br>
                     <input id="dt" type="date" class="shadow" name="date"><br><br>
-                    <input id="bttn" type="submit" value="add task" class="shadow btn btn-primary">
+                    <input id="bttn" type="submit" value="Add Task" class="shadow btn btn-primary">
             </form>
         </div>
     </div>
+
     <div id="todo_list" class="col-12 col-sm-6 ">
-        <h5 id="to_be_com."class="h5 ">To be completed.........</h5>
+
         {% for i in info %}
         <div class="card shadow" id="lst">
             <div class="card-body">
                 <h5 class="card-text">{{ i.task}}</h5>
-                <h6 class="card-text">{{ i.priority}}</h6>&emsp13;
+                <h6 class="card-text">{{ i.priority}} th priority</h6>&emsp13;
                 <h6 class="card-text">{{ i.date}}</h6>
-                <a href="{% url 'todoapp_1:delete' i.id %}" class="shadow btn btn-danger">completed</a>
-                <a href="{% url 'todoapp_1:update' i.id %}" class="shadow btn btn-primary">update</a>
+                <a href="{% url 'todoapp_1:delete' i.id %}" class="shadow btn btn-danger">Completed</a>
+                <a href="{% url 'todoapp_1:update' i.id %}" class="shadow btn btn-primary">Update</a>
             </div>
         </div>
         {% endfor%}

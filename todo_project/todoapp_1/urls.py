@@ -6,7 +6,7 @@ from . import views
 app_name = 'todoapp_1'
 
 urlpatterns = [
-    path('', views.home, name='home'),
+
     path('home/', views.home, name='home'),
     path('delete/<int:id>/', views.delete, name='delete'),
     path('yes/<int:id>', views.y, name='y'),
@@ -16,7 +16,7 @@ urlpatterns = [
     path('c-detail/<int:pk>/', views.TodoDetailView.as_view(), name='c-details'),
     path('c-update/<int:pk>/', views.TodoUpdateView.as_view(), name='c-update'),
     path('c-delete/<int:pk>/', views.TodoDeleteView.as_view(), name='c-delete'),
-    #path('c-yes/<int:pk>/', views.Y.as_view(), name='y'),
+    # path('c-yes/<int:pk>/', views.Y.as_view(), name='y'),
 
 
-    ]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

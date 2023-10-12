@@ -70,15 +70,15 @@ def delete(request, id):
 def y(request, id):
     details = TodoDetails.objects.get(id=id)
     details.delete()
-    return redirect('/')
+    return redirect(reverse('todoapp_1:home'))
 
 
 def update(request, id):
     old = TodoDetails.objects.get(id=id)
-    new = TaskForm(request.POST or None, instance=old) # NB: date field should be updated
+    new = TaskForm(request.POST or None, instance=old)    # NB: date field should be updated
     if new.is_valid():
         new.save()
-        return redirect('/')
+        return redirect(reverse('todoapp_1:home'))
     else:
         return render(request, 'update.html', {'old': old})
 
