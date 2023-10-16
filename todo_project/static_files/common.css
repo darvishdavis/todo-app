@@ -12,9 +12,28 @@ body{
 }
 
 #whole{
-
 }
 
 #header-img{
     width: 100vw;
+}
+
+.image-text-user {
+    position: absolute;
+    top: 10%; /* Adjust as needed */
+    left: 10%; /* Adjust as needed */
+    transform: translate(-50%, -50%); /* Center the text */
+    background-color: rgba(255, 255, 255, 0.5); /* Background color with transparency */
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.image-text-logout {
+    position: absolute;
+    top: 10%; /* Adjust as needed */
+    left: 90%; /* Adjust as needed */
+    transform: translate(-50%, -50%); /* Center the text */
+    background-color: rgba(255, 255, 255, 0.5); /* Background color with transparency */
+    padding: 10px;
+    border-radius: 15px;
 }

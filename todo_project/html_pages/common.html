@@ -15,7 +15,20 @@
         <div id="whole" >
             <div class="container-fluid">
                 <div  class="row">
-                    <img id="header-img" src="{% static 'wp7881177-cropped.jpg' %}" class="img-fluid" alt="todo image">
+                    <div class="header-picture">
+                    <img id="header-img" src="{% static 'wp7881177-cropped.jpg' %}" class="img-fluid" alt="header-image">
+
+                    {% if user.is_authenticated %}
+                        <div class="image-text-user">
+                            <h5>hi {{user}} !</h5>
+                        </div>
+
+                        <div class="image-text-logout">
+                            <a href="{% url 'todo_secure:logout' %}" class="btn btn-light" role="button">Logout</a>
+                        </div>
+                    {% endif %}
+
+                    </div>
                 </div>
                  {% block body %}
                     <!-- your dynamic content here -->
