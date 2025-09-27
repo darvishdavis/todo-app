@@ -1,0 +1,77 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Packaging / build
+build/
+dist/
+*.egg-info/
+*.egg
+pip-log.txt
+pip-delete-this-directory.txt
+
+# --- Django ---
+# Logs
+*.log
+
+# Local settings (if used)
+local_settings.py
+
+# SQLite (if someone switches to SQLite for dev)
+db.sqlite3
+
+# User-uploaded files (keep out of Git)
+media/
+
+
+# Do NOT ignore app migrations!
+# (keep: **/migrations/*.py, excluding __pycache__ which is already covered)
+
+# --- Test / coverage ---
+.pytest_cache/
+.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+htmlcov/
+.tox/
+.cache/
+
+# --- Type checkers / linters ---
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+.pyre/
+
+# --- IDE / Editor ---
+.idea/
+*.iml
+.vscode/
+.vscode-oss/
+*.code-workspace
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Docker (local-only helpers) ---
+# Per-service env files (example path)
+infra/**/.env
+
+# Optional: don’t version local overrides
+docker-compose.override.yml
+
+# --- Misc ---
+# Byte-compiled compiled C extensions
+*.so
